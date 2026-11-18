@@ -1,16 +1,16 @@
 /* Lightarc site styles. No build step, no external fonts. */
 
 :root {
-  --bg: #f7f6f2;
+  --bg: #f3f5f8;
   --surface: #ffffff;
-  --text: #1d2321;
-  --muted: #5b6662;
-  --line: #e3e1da;
-  --accent: #1f6f66;
-  --accent-strong: #165850;
-  --accent-soft: #e2efec;
+  --text: #0f172a;
+  --muted: #526071;
+  --line: #dde3ea;
+  --accent: #1d4ed8;
+  --accent-strong: #1e40af;
+  --accent-soft: #e6edfb;
   --on-accent: #ffffff;
-  --dot: #b9c4c0;
+  --dot: #b4bfcc;
   --radius: 14px;
   --max: 46rem;
   --wide: 64rem;
@@ -19,16 +19,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121615;
-    --surface: #1a201e;
-    --text: #e8ecea;
-    --muted: #a3aeaa;
-    --line: #2b3431;
-    --accent: #6fc2b5;
-    --accent-strong: #8fd3c8;
-    --accent-soft: #1d2f2c;
-    --on-accent: #0d1a18;
-    --dot: #4b5753;
+    --bg: #0b0e13;
+    --surface: #131820;
+    --text: #e6ebf2;
+    --muted: #9aa6b5;
+    --line: #232b36;
+    --accent: #5b9dff;
+    --accent-strong: #84b5ff;
+    --accent-soft: #17243a;
+    --on-accent: #07101f;
+    --dot: #3d4756;
   }
 }
 
@@ -72,6 +72,7 @@ img, svg { max-width: 100%; height: auto; }
 .site-nav { display: flex; gap: 1.1rem; align-items: center; flex-wrap: wrap; }
 .site-nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--text); }
+.site-nav a.button, .site-nav a.button:hover { color: var(--on-accent); }
 
 /* Buttons */
 .button {
