@@ -11,16 +11,17 @@
   <meta property="og:title" content="Lightarc: Weight Trend &amp; GLP-1 dose log for Android">
   <meta property="og:description" content="A weight trend tracker for Android with optional GLP-1 dose logging. No account. No ads. Your data stays on your phone.">
   <meta property="og:url" content="https://lightarc.app/">
-  <meta name="theme-color" content="#1d4ed8">
+  <meta name="theme-color" content="#141a24">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/outfit-latin-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="inner">
-      <a class="wordmark" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M6 22c5-9 15-12 20-11" fill="none" stroke="var(--on-accent)" stroke-width="3" stroke-linecap="round"/></svg>Lightarc</a>
+      <a class="wordmark" href="/"><svg viewBox="24 22 60 60" aria-hidden="true"><path d="M31 64 Q54 18 77 64" fill="none" stroke="#8FA8FF" stroke-width="7" stroke-linecap="round"/><path d="M27 75 H81" stroke="#4C5668" stroke-width="5" stroke-linecap="round"/><circle cx="54" cy="41" r="6.5" fill="#fff"/></svg>Lightarc</a>
       <nav class="site-nav" aria-label="Main">
         <a href="/guides/">Guides</a>
         <a href="/press/">Press</a>
@@ -42,7 +43,26 @@
           <p><a class="button" href="https://play.google.com/store/apps/details?id=com.omsgroup.lightarc">Get it on Google Play</a></p>
           <p class="note">Free, with an optional one-time Premium unlock. No subscription.</p>
         </div>
-        <figure class="trend-art" aria-label="Illustration: scattered daily weigh-ins with one smooth trend line through them"><svg viewBox="0 0 520 260" role="img" aria-hidden="true"><g class="dots"><circle cx="20.0" cy="150.0" r="4.5"/><circle cx="31.7" cy="152.1" r="4.5"/><circle cx="43.4" cy="135.7" r="4.5"/><circle cx="55.1" cy="140.7" r="4.5"/><circle cx="66.8" cy="145.9" r="4.5"/><circle cx="78.5" cy="160.7" r="4.5"/><circle cx="90.2" cy="120.8" r="4.5"/><circle cx="102.0" cy="125.9" r="4.5"/><circle cx="113.7" cy="126.8" r="4.5"/><circle cx="125.4" cy="161.7" r="4.5"/><circle cx="137.1" cy="122.5" r="4.5"/><circle cx="148.8" cy="125.7" r="4.5"/><circle cx="160.5" cy="111.6" r="4.5"/><circle cx="172.2" cy="144.5" r="4.5"/><circle cx="183.9" cy="117.9" r="4.5"/><circle cx="195.6" cy="132.0" r="4.5"/><circle cx="207.3" cy="119.7" r="4.5"/><circle cx="219.0" cy="131.8" r="4.5"/><circle cx="230.7" cy="105.5" r="4.5"/><circle cx="242.4" cy="122.4" r="4.5"/><circle cx="254.1" cy="134.4" r="4.5"/><circle cx="265.9" cy="136.3" r="4.5"/><circle cx="277.6" cy="109.3" r="4.5"/><circle cx="289.3" cy="106.1" r="4.5"/><circle cx="301.0" cy="135.5" r="4.5"/><circle cx="312.7" cy="138.1" r="4.5"/><circle cx="324.4" cy="130.1" r="4.5"/><circle cx="336.1" cy="108.7" r="4.5"/><circle cx="347.8" cy="136.5" r="4.5"/><circle cx="359.5" cy="127.1" r="4.5"/><circle cx="371.2" cy="141.5" r="4.5"/><circle cx="382.9" cy="125.3" r="4.5"/><circle cx="394.6" cy="155.2" r="4.5"/><circle cx="406.3" cy="125.8" r="4.5"/><circle cx="418.0" cy="138.3" r="4.5"/><circle cx="429.8" cy="132.8" r="4.5"/><circle cx="441.5" cy="175.7" r="4.5"/><circle cx="453.2" cy="147.4" r="4.5"/><circle cx="464.9" cy="144.2" r="4.5"/><circle cx="476.6" cy="136.3" r="4.5"/><circle cx="488.3" cy="177.4" r="4.5"/><circle cx="500.0" cy="170.0" r="4.5"/></g><path class="line" d="M20.0,150.0 L31.7,147.8 L43.4,145.7 L55.1,143.6 L66.8,141.5 L78.5,139.5 L90.2,137.5 L102.0,135.6 L113.7,133.8 L125.4,132.1 L137.1,130.6 L148.8,129.1 L160.5,127.7 L172.2,126.6 L183.9,125.5 L195.6,124.6 L207.3,123.9 L219.0,123.3 L230.7,123.0 L242.4,122.7 L254.1,122.7 L265.9,122.9 L277.6,123.3 L289.3,123.8 L301.0,124.5 L312.7,125.5 L324.4,126.6 L336.1,127.9 L347.8,129.4 L359.5,131.0 L371.2,132.9 L382.9,134.9 L394.6,137.0 L406.3,139.3 L418.0,141.8 L429.8,144.4 L441.5,147.1 L453.2,149.9 L464.9,152.9 L476.6,155.9 L488.3,159.0 L500.0,162.2"/></svg><figcaption>Daily weigh-ins bounce. The trend line shows the direction. (Illustration.)</figcaption></figure>
+        <figure class="hero-art">
+          <svg class="curve" viewBox="0 0 600 300" aria-hidden="true"><defs><linearGradient id="cg" x1="0" x2="1"><stop offset="0" stop-color="#8FA8FF" stop-opacity="0"/><stop offset=".45" stop-color="#8FA8FF" stop-opacity=".55"/><stop offset="1" stop-color="#8FA8FF" stop-opacity="0"/></linearGradient></defs><path d="M0 70 C140 80 230 150 330 190 S520 245 600 250" fill="none" stroke="url(#cg)" stroke-width="3" stroke-linecap="round"/><g fill="#8FA8FF" fill-opacity=".28"><circle cx="40" cy="62" r="3.5"/><circle cx="92" cy="88" r="3.5"/><circle cx="140" cy="70" r="3.5"/><circle cx="190" cy="112" r="3.5"/><circle cx="238" cy="128" r="3.5"/><circle cx="286" cy="158" r="3.5"/><circle cx="380" cy="196" r="3.5"/><circle cx="430" cy="226" r="3.5"/><circle cx="478" cy="214" r="3.5"/><circle cx="528" cy="246" r="3.5"/><circle cx="572" cy="236" r="3.5"/></g></svg>
+          <div class="phone"><img src="/assets/shots/trend.webp" width="600" height="1347" alt="Lightarc's Trend screen on a Pixel phone: current trend 196.8 lb, weekly rate down 1.2 lb a week, and a three-month chart with the trend line over daily weigh-ins."></div>
+          <figcaption>The Trend screen. Sample data.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="band screens">
+      <div class="wrap-wide">
+        <div class="section-head">
+          <p class="eyebrow">Inside the app</p>
+          <h2>Simple to log. Calm to read.</h2>
+          <p>Weigh-ins, doses and your history sit side by side, so your log reads as one story.</p>
+        </div>
+        <div class="shots">
+          <figure><div class="phone"><img src="/assets/shots/weigh-in.webp" width="600" height="1347" loading="lazy" alt="The weigh-in sheet: 195.2 lb with plus and minus buttons, an optional note, and optional body fat and muscle."></div><figcaption>Log a weigh-in, with optional body fat and muscle</figcaption></figure>
+          <figure><div class="phone"><img src="/assets/shots/dose.webp" width="600" height="1347" loading="lazy" alt="The Dose screen: next dose, a Log dose button, and the estimated level chart with a note that it is a population average, not a measurement."></div><figcaption>Dose log, schedule and the estimated level (an illustration, not a measurement)</figcaption></figure>
+          <figure><div class="phone"><img src="/assets/shots/history.webp" width="600" height="1347" loading="lazy" alt="The History screen: weigh-ins and doses listed together by month, each weigh-in with its trend value."></div><figcaption>Weigh-ins and doses together in your history</figcaption></figure>
+        </div>
       </div>
     </section>
 
@@ -64,7 +84,7 @@
             <li>Have a smart scale? Lightarc can read the weigh-ins its app saves in Health Connect (weight only, read-only)</li>
             <li>You see a preview before anything is saved</li>
           </ul>
-          <p><a class="more" href="/guides/move-weight-history-to-android/">How to move your weight history</a></p>
+          <p class="more-row"><a class="more" href="/guides/move-weight-history-to-android/">How to move your weight history</a></p>
         </div>
         <div class="card">
           <h2>GLP-1 and other medications, built in and free</h2>
@@ -75,7 +95,7 @@
             <li>Dose days, dose changes and on-medication periods marked on your weight chart</li>
             <li>A side-effect log, for your own record or your prescriber</li>
           </ul>
-          <p><a class="more" href="/guides/glp1-doses-and-weight-one-chart/">Doses and weight on one chart</a></p>
+          <p class="more-row"><a class="more" href="/guides/glp1-doses-and-weight-one-chart/">Doses and weight on one chart</a></p>
         </div>
         <div class="card">
           <h2>Your data, yours</h2>
@@ -89,7 +109,7 @@
       </div>
     </section>
 
-    <section class="band">
+    <section class="band alt">
       <div class="wrap">
         <h2>Free, with an optional one-time Premium</h2>
         <p>Logging, your chart, reminders, dose tracking, import and export are free, always. Premium is a single one-time purchase, with no subscription:</p>
@@ -106,13 +126,13 @@
     </section>
 
     <section class="band">
-      <div class="wrap">
-        <h2>Guides</h2>
-        <ul class="guide-list">
-          <li><a class="title" href="/guides/move-weight-history-to-android/">How to move your weight history to a new Android app</a><br><span class="note">Take your weigh-ins out of Libra or Happy Scale as a CSV file and bring your whole history into Lightarc.</span></li>
-          <li><a class="title" href="/guides/trend-vs-daily-number/">Why the trend tells you more than today&#x27;s number</a><br><span class="note">Why your weight goes up and down day to day, and how a trend line shows the direction you&#x27;re actually heading.</span></li>
-          <li><a class="title" href="/guides/new-year-tracking-start/">Starting to track your weight this year, without the daily stress</a><br><span class="note">Set up a way of tracking you can keep past January: expect the bounce, watch the trend, pick a rhythm.</span></li>
-          <li><a class="title" href="/guides/glp1-doses-and-weight-one-chart/">Keeping your GLP-1 doses and your weight in one place</a><br><span class="note">Log doses, injection sites and how you feel next to your weight trend, with private reminders.</span></li>
+      <div class="wrap-wide">
+        <div class="section-head"><h2>Guides</h2></div>
+        <ul class="guide-list guides-grid">
+          <li class="card"><a class="title" href="/guides/move-weight-history-to-android/">How to move your weight history to a new Android app</a><p>Take your weigh-ins out of Libra or Happy Scale as a CSV file and bring your whole history into Lightarc.</p></li>
+          <li class="card"><a class="title" href="/guides/trend-vs-daily-number/">Why the trend tells you more than today&#x27;s number</a><p>Why your weight goes up and down day to day, and how a trend line shows the direction you&#x27;re actually heading.</p></li>
+          <li class="card"><a class="title" href="/guides/new-year-tracking-start/">Starting to track your weight this year, without the daily stress</a><p>Set up a way of tracking you can keep past January: expect the bounce, watch the trend, pick a rhythm.</p></li>
+          <li class="card"><a class="title" href="/guides/glp1-doses-and-weight-one-chart/">Keeping your GLP-1 doses and your weight in one place</a><p>Log doses, injection sites and how you feel next to your weight trend, with private reminders.</p></li>
         </ul>
       </div>
     </section>
