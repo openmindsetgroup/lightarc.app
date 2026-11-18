@@ -1,0 +1,157 @@
+/* Lightarc site styles. No build step, no external fonts. */
+
+:root {
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --text: #1d2321;
+  --muted: #5b6662;
+  --line: #e3e1da;
+  --accent: #1f6f66;
+  --accent-strong: #165850;
+  --accent-soft: #e2efec;
+  --on-accent: #ffffff;
+  --dot: #b9c4c0;
+  --radius: 14px;
+  --max: 46rem;
+  --wide: 64rem;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121615;
+    --surface: #1a201e;
+    --text: #e8ecea;
+    --muted: #a3aeaa;
+    --line: #2b3431;
+    --accent: #6fc2b5;
+    --accent-strong: #8fd3c8;
+    --accent-soft: #1d2f2c;
+    --on-accent: #0d1a18;
+    --dot: #4b5753;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { color: var(--accent-strong); }
+
+img, svg { max-width: 100%; height: auto; }
+
+.skip {
+  position: absolute; left: -999px; top: 0;
+  background: var(--surface); padding: 0.5rem 1rem;
+}
+.skip:focus { left: 1rem; }
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.site-header .inner {
+  max-width: var(--wide); margin: 0 auto; padding: 0.85rem 1rem;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+.wordmark {
+  font-weight: 700; font-size: 1.2rem; letter-spacing: -0.01em;
+  color: var(--text); text-decoration: none; margin-right: auto;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+.wordmark svg { width: 28px; height: 28px; }
+.site-nav { display: flex; gap: 1.1rem; align-items: center; flex-wrap: wrap; }
+.site-nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--text); }
+
+/* Buttons */
+.button {
+  display: inline-block; background: var(--accent); color: var(--on-accent);
+  text-decoration: none; font-weight: 600; border-radius: 999px;
+  padding: 0.7rem 1.3rem; line-height: 1.2;
+}
+.button:hover { background: var(--accent-strong); color: var(--on-accent); }
+.button.small { padding: 0.45rem 0.95rem; font-size: 0.9rem; }
+
+/* Layout */
+main { display: block; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1rem; }
+.wrap-wide { max-width: var(--wide); margin: 0 auto; padding: 0 1rem; }
+
+h1, h2, h3 { line-height: 1.25; letter-spacing: -0.015em; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.7rem); margin: 0 0 0.75rem; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 0.4rem; }
+p, ul, ol { margin: 0 0 1rem; }
+li { margin-bottom: 0.35rem; }
+
+/* Home hero */
+.hero { padding: 3.5rem 0 2.5rem; }
+.hero .wrap-wide { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 820px) {
+  .hero .wrap-wide { grid-template-columns: 1.1fr 1fr; }
+}
+.hero .lede { font-size: 1.15rem; color: var(--muted); max-width: 34rem; }
+.hero .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 1.5rem; padding: 0; list-style: none; }
+.hero .badges li {
+  margin: 0; background: var(--accent-soft); color: var(--text);
+  border-radius: 999px; padding: 0.25rem 0.8rem; font-size: 0.9rem;
+}
+.trend-art {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.25rem;
+}
+.trend-art .dots circle { fill: var(--dot); }
+.trend-art .line { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linecap: round; }
+.trend-art figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; }
+
+/* Feature grid */
+.features { padding: 1rem 0 2.5rem; }
+.grid { display: grid; gap: 1rem; }
+@media (min-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.25rem 1.35rem;
+}
+.card h2, .card h3 { margin-top: 0; font-size: 1.15rem; }
+.card ul { padding-left: 1.15rem; margin-bottom: 0; }
+.card p:last-child { margin-bottom: 0; }
+.card a.more { font-weight: 600; text-decoration: none; }
+
+.band { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+.center { text-align: center; }
+.note { color: var(--muted); font-size: 0.92rem; }
+
+/* Articles (guides, press) */
+.article { padding: 2.5rem 0 3rem; }
+.article .crumbs { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
+.article .crumbs a { color: var(--muted); }
+.article table { border-collapse: collapse; width: 100%; margin: 0 0 1.25rem; font-size: 0.95rem; }
+.article th, .article td { border-bottom: 1px solid var(--line); padding: 0.55rem 0.5rem; text-align: left; vertical-align: top; }
+.article td:first-child { color: var(--muted); white-space: nowrap; }
+.article code { background: var(--accent-soft); padding: 0.05rem 0.35rem; border-radius: 6px; font-size: 0.92em; }
+.article .cta { margin: 1.5rem 0 0; }
+.article blockquote {
+  margin: 0 0 1rem; padding: 0.25rem 1rem; border-left: 3px solid var(--accent);
+  color: var(--muted);
+}
+.article td { overflow-wrap: anywhere; }
+
+.guide-list { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.guide-list li { margin: 0; }
+.guide-list a.title { font-weight: 600; font-size: 1.1rem; text-decoration: none; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); background: var(--surface); padding: 2rem 0; font-size: 0.9rem; color: var(--muted); }
+.site-footer .wrap-wide { display: grid; gap: 0.6rem; }
+.site-footer a { color: var(--muted); }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
